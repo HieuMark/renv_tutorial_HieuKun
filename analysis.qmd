@@ -1,0 +1,14 @@
+---
+title: "Analysis"
+format: html
+editor: visual
+---
+
+```{r}
+library(HistData)
+library(tidyverse)
+data <- Breslau |> filter(age >= 5)
+data |> ggplot() +
+  geom_line() + geom_point() + aes(age, total)
+```
+
